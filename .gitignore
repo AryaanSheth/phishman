@@ -2,3 +2,4 @@
 /database
 /logs
 *.ini
+error.log

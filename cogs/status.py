@@ -15,12 +15,22 @@ class status(commands.Cog):
     @commands.command()
     async def status(self, ctx):
         resttime = ping('google.com').rtt_avg_ms
-        embed = discord.Embed(title="Status",
-                              description=f"Ping: {resttime}ms",
-                              type="rich",
-                              color=0x59E032,
-                              timestamp=datetime.datetime.utcnow()
-                              )
+
+        if resttime < 100:
+            embed = discord.Embed(title="Status",
+                                  description=f"Ping: {resttime}ms",
+                                  type="rich",
+                                  color=0x2EE738,
+                                  timestamp=datetime.datetime.utcnow()
+                                  )
+        else:
+            embed = discord.Embed(title="Status",
+                                  description=f"We are currently experiencing issues with our servers. Please try again later.",
+                                  type="rich",
+                                  color=0xE7382E,
+                                  timestamp=datetime.datetime.utcnow()
+                                  )
+
         await ctx.send(embed=embed)
 
 

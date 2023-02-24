@@ -42,5 +42,6 @@ async def main():
     await client.start(config['DEFAULT']['Token'])
 
 if __name__ == "__main__":
+    update_data.UpdateData().write_to_database()
     threading.Thread(target=update_data_thread).start()
     asyncio.run(main())

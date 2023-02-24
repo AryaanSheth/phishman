@@ -19,15 +19,17 @@ class check_message(commands.Cog):
 
         search = message_search.message_search(message.content)
         flag, links = search.search()
-
+        
         if flag:
             await message.channel.send(embed=discord.Embed(
                 title="Looks like I caught a phish 🎣",
                 description="Alas these seas be a no phising zone, catch yer carp elsewhere",
                 color=0xff0000
             ))
+            
             await message.delete()
 
 
 async def setup(client):
     await client.add_cog(check_message(client))
+    
