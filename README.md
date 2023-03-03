@@ -3,7 +3,7 @@
 ![MIT License](https://img.shields.io/bower/l/p?style=for-the-badge)
 
 An anti-phishing Discord bot that moderates phishing links sent to the server using data from the PhishTank API. 
-
+[Add](https://discord.com/api/oauth2/authorize?client_id=1076309446831120584&permissions=8&scope=bot) to you server
 
 
 
