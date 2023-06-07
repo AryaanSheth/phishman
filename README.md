@@ -13,7 +13,7 @@ The backend calls a request to the current PhishTank database to fetch all phish
 
 
 ## Deployment
-Bot is currently deployed on a local Raspberry Pi
+Bot is currently not deployed due to upkeep costs
 
 
 ## Contributing
